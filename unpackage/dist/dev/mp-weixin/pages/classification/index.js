@@ -52,7 +52,7 @@ const _sfc_main = {
     console.log(calcHeight);
     return (_ctx, _cache) => {
       return {
-        a: common_vendor.sr(navComRef, "1cf27b2a-0", {
+        a: common_vendor.sr(navComRef, "53149db2-0", {
           "k": "navComRef"
         }),
         b: common_vendor.f(100, (i, k0, i0) => {
@@ -63,12 +63,12 @@ const _sfc_main = {
         e: common_vendor.p({
           scrollViewConfig
         }),
-        f: common_vendor.sr(tabComRef, "1cf27b2a-2", {
+        f: common_vendor.sr(tabComRef, "53149db2-2", {
           "k": "tabComRef"
         })
       };
     };
   }
 };
-const MiniProgramPage = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["__scopeId", "data-v-1cf27b2a"], ["__file", "D:/myCode/moon-mall/pages/index/index.vue"]]);
+const MiniProgramPage = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["__scopeId", "data-v-53149db2"], ["__file", "D:/myCode/moon-mall/pages/classification/index.vue"]]);
 wx.createPage(MiniProgramPage);

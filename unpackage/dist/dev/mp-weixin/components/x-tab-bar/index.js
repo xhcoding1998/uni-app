@@ -17,11 +17,16 @@ const _sfc_main = {
     const currentPage = pages[pages.length - 1];
     console.log(currentPage);
     const tabList = [
-      { title: "首页", icon: "home", path: "pages/index/index" },
-      { title: "分类", icon: "list", path: "pages/classification/index" },
-      { title: "购物车", icon: "cart", path: "pages/shoppingCart/index" },
-      { title: "我的", icon: "person", path: "pages/main/index" }
+      { title: "首页", icon: "home", path: "/pages/index/index" },
+      { title: "分类", icon: "list", path: "/pages/classification/index" },
+      { title: "购物车", icon: "cart", path: "/pages/shoppingCart/index" },
+      { title: "我的", icon: "person", path: "/pages/main/index" }
     ];
+    const navigatorTo = (item) => {
+      common_vendor.index.switchTab({
+        url: item.path
+      });
+    };
     return (_ctx, _cache) => {
       return {
         a: common_vendor.f(tabList, (item, idx, i0) => {
@@ -30,10 +35,11 @@ const _sfc_main = {
             b: common_vendor.p({
               type: item.icon,
               size: "20",
-              color: common_vendor.unref(currentPage).route === item.path ? "#007aff" : ""
+              color: "/" + common_vendor.unref(currentPage).route === item.path ? "#007aff" : ""
             }),
             c: common_vendor.t(item.title),
-            d: item.icon
+            d: item.icon,
+            e: common_vendor.o(($event) => navigatorTo(item), item.icon)
           };
         }),
         b: common_vendor.unref(bottom) - 15 + "px"

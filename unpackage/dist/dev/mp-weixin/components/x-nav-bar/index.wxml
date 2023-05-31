@@ -1,1 +1,1 @@
-<view class="nav-bar" style="{{'padding-top:' + a}}"><view class="nav-content"> 这是一个标题 </view></view>
+<view class="nav-bar" style="{{'padding-top:' + a}}"><view class="nav-content"><block wx:if="{{$slots.d}}"><slot></slot></block><block wx:else>标题</block></view></view>

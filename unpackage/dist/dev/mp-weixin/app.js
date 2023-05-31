@@ -3,12 +3,16 @@ Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 const common_vendor = require("./common/vendor.js");
 if (!Math) {
   "./pages/index/index.js";
+  "./pages/classification/index.js";
+  "./pages/shoppingCart/index.js";
+  "./pages/main/index.js";
 }
 const _sfc_main = {
   onLaunch: function() {
     console.log("App Launch");
   },
   onShow: function() {
+    common_vendor.index.hideTabBar();
     console.log("App Show");
   },
   onHide: function() {

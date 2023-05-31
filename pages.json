@@ -6,6 +6,27 @@
 				"navigationBarTitleText": "首页",
 				"enablePullDownRefresh": false	//开启下拉刷新
 			}
+		},
+		{
+			"path" : "pages/classification/index",
+			"style" : {
+				"navigationBarTitleText": "分类",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path" : "pages/shoppingCart/index",
+			"style" : {
+				"navigationBarTitleText": "购物车",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path" : "pages/main/index",
+			"style" : {
+				"navigationBarTitleText": "我的",
+				"enablePullDownRefresh": false
+			}
 		}
   ],
 	"globalStyle": {
@@ -17,5 +38,25 @@
 		"custom": {
 			"^x-(.*)": "@/components/x-$1/index.vue" // 匹配components目录内的vue文件
 		}
+	},
+	"tabBar": {
+		"list": [
+			{
+				"pagePath": "pages/index/index",
+				"text": "首页"
+			},
+			{
+				"pagePath" : "pages/classification/index",
+				"text": "分类"
+			},
+			{
+				"pagePath" : "pages/shoppingCart/index",
+				"text": "购物车"
+			},
+			{
+				"pagePath" : "pages/main/index",
+				"text": "我的"
+			}
+		]
 	}
 }

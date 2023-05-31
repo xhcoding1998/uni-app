@@ -1,7 +1,7 @@
 <template>
 	<view class="nav-bar" :style="{ paddingTop: top+'px' }">
 		<view class="nav-content">
-			这是一个标题
+			<slot>标题</slot>
 		</view>
 	</view>
 </template>
@@ -18,12 +18,12 @@
 		left: 0;
 		z-index: 999;
 		width: 100%;
-		height: 44px;
+		height: 88rpx;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		background: $uni-nav-bar-bg;
 		color: $uni-font-color;
-		border-bottom: 1px solid $uni-border-color;
+		border-bottom: 1rpx solid $uni-border-color;
 	}
 </style>

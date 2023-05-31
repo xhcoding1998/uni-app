@@ -15,7 +15,7 @@
   border-top: 1px solid rgba(184, 184, 184, 0.5);
 }
 .footer-bar .tab-content {
-  padding: 10px 0;
+  padding: 20rpx 0;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 }
@@ -24,5 +24,5 @@
 }
 .footer-bar .tab-content .tab-item .title {
   display: block;
-  font-size: 12px;
+  font-size: 24rpx;
 }

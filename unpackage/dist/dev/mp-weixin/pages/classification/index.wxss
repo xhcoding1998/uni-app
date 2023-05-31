@@ -1,0 +1,11 @@
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* nav的颜色*/
+/* 默认字体颜色*/
+.content.data-v-53149db2 {
+  height: 100vh;
+  overflow: hidden;
+}
+.content .view.data-v-53149db2 {
+  width: 100%;
+}

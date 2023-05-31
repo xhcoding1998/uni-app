@@ -1,7 +1,7 @@
 <template>
 	<view class="content">
 		<x-nav-bar ref="navComRef">
-			首页
+			购物车
 		</x-nav-bar>
 		
 		<x-scroll :scrollViewConfig="scrollViewConfig">

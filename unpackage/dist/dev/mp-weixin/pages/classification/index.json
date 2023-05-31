@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "分类",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "x-nav-bar": "../../components/x-nav-bar/index",
+    "x-scroll": "../../components/x-scroll/index",
+    "x-tab-bar": "../../components/x-tab-bar/index"
+  }
+}
