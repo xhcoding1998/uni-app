@@ -1,0 +1,1 @@
+<scroll-view scroll-y="{{a}}" refresher-enabled="{{b}}" refresher-triggered="{{c}}" lower-threshold="{{d}}" bindrefresherrefresh="{{e}}" bindscrolltolower="{{f}}"><slot></slot></scroll-view>

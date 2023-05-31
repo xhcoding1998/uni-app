@@ -1,0 +1,28 @@
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* nav的颜色*/
+/* 默认字体颜色*/
+.footer-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: auto;
+  background: #FFFFFF;
+  color: #000000;
+  box-sizing: border-box;
+  border-top: 1px solid rgba(184, 184, 184, 0.5);
+}
+.footer-bar .tab-content {
+  padding: 10px 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.footer-bar .tab-content .tab-item {
+  text-align: center;
+}
+.footer-bar .tab-content .tab-item .title {
+  display: block;
+  font-size: 12px;
+}

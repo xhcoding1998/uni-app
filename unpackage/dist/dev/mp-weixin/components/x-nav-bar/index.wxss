@@ -1,0 +1,19 @@
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* nav的颜色*/
+/* 默认字体颜色*/
+.nav-bar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #FFFFFF;
+  color: #000000;
+  border-bottom: 1px solid rgba(184, 184, 184, 0.5);
+}

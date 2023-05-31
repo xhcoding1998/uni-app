@@ -1,0 +1,1 @@
+"use strict";const e=require("../../common/vendor.js"),n={__name:"index",setup(n){const t=e.index.getSystemInfoSync(),{top:o,bottom:s}=t.safeAreaInsets;return(n,t)=>({a:e.unref(o)+"px"})}};wx.createComponent(n);
