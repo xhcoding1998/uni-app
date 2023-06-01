@@ -8,4 +8,40 @@
 }
 .content .view.data-v-53149db2 {
   width: 100%;
+  display: flex;
+}
+.content .view .left-tab-list.data-v-53149db2 {
+  width: auto;
+  height: 100%;
+}
+.content .view .left-tab-list .left-tab-content.data-v-53149db2 {
+  display: grid;
+  gap: 20rpx;
+  grid-template-columns: repeat(1, 1fr);
+  border-right: 1px solid rgba(184, 184, 184, 0.5);
+  padding: 30rpx;
+  box-sizing: border-box;
+}
+.content .view .left-tab-list .left-tab-content .left-tab-item.data-v-53149db2 {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  background: rgba(184, 184, 184, 0.5);
+}
+.content .view .right-pdc-list.data-v-53149db2 {
+  flex: 1;
+  height: 100%;
+}
+.content .view .right-pdc-list .right-pdc-content.data-v-53149db2 {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180rpx, 1fr));
+  gap: 15px;
+  padding: 30rpx 30rpx 20rpx 30rpx;
+  box-sizing: border-box;
+}
+.content .view .right-pdc-list .right-pdc-content .right-pdc-item.data-v-53149db2 {
+  background: rgba(184, 184, 184, 0.5);
+  height: 150rpx;
+  border-radius: 10px;
 }
