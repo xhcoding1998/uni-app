@@ -7,17 +7,14 @@
 		<x-scroll :scrollViewConfig="scrollViewConfig">
 			<view
 				class="view" 
-				:style="{ 
-					height: `calc(100vh - ${ calcHeight }px)` 
-				}">
+				:style="{	height: `calc(100vh - ${ calcHeight }px)` }">
 				<view class="swiper-banner">
 					
 				</view>
 				<view class="tab-list">
 					<view 
 						class="tab-item"
-						v-for="(item, idx) in 8"
-					>
+						v-for="(item, idx) in 8">
 						<view class="tab-content">
 							
 						</view>
@@ -26,8 +23,7 @@
 				<view class="pdc-list">
 					<view 
 						class="pdc-item"
-						v-for="(item, idx) in 20"
-					>
+						v-for="(item, idx) in 20">
 						<img class="pdc-img" src="" alt="">
 						<view class="pdc-info">
 							

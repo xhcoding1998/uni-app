@@ -9,15 +9,12 @@
 			<view
 				class="left-tab-list">
 				<x-scroll :scrollViewConfig="scrollViewConfig">
-					<view 
-						:style="{
-							height: `calc(100vh - ${ calcHeight }px)` 
-						}">
+					<view :style="{	height: `calc(100vh - ${ calcHeight }px)` }">
 						<view class="left-tab-content">
 							<view
 								class="left-tab-item"
-								v-for="(item, idx) in 20"
-							>
+								v-for="(item, idx) in 20">
+							
 							</view>
 						</view>
 					</view>
@@ -27,15 +24,12 @@
 				<x-scroll
 				 :scrollViewConfig="scrollViewConfig">
 					<view 
-						:style="{
-							height: `calc(100vh - ${ calcHeight }px)` 
-						}">
+						:style="{	height: `calc(100vh - ${ calcHeight }px)` }">
 						<view class="right-pdc-content">
 							<view
 								class="right-pdc-item"
-								v-for="(item, idx) in 100"
-							>
-							
+								v-for="(item, idx) in 100">
+								{{ calcHeight }}
 							</view>
 						</view>
 					</view>
