@@ -29,7 +29,7 @@
 							<view
 								class="right-pdc-item"
 								v-for="(item, idx) in 100">
-								{{ calcHeight }}
+
 							</view>
 						</view>
 					</view>

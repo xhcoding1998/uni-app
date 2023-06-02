@@ -20,35 +20,114 @@
   background: #FFFFFF;
 }
 .content .view .detail-view.data-v-271c45a4 {
-  padding: 0 30rpx 80rpx 30rpx;
+  padding: 0 10rpx 80rpx 10rpx;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20rpx;
 }
 .content .view .detail-view .detail-swiper.data-v-271c45a4 {
   width: 100%;
   height: 500rpx;
   background: #FFFFFF;
 }
-.content .view .detail-view .price-info.data-v-271c45a4 {
+.content .view .detail-view .detail-card.data-v-271c45a4 {
+  border-radius: 30rpx;
+  background: #FFFFFF;
+  overflow: hidden;
+}
+.content .view .detail-view .detail-card .price-info.data-v-271c45a4 {
   padding: 30rpx;
-  background: #79BBFF;
-  border-radius: 30rpx 30rpx 0 0;
+  background: #FF4242;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.content .view .detail-view .price-info .price-count.data-v-271c45a4 {
+.content .view .detail-view .detail-card .price-info .price-count.data-v-271c45a4 {
   display: flex;
   align-items: center;
   color: #fff;
 }
-.content .view .detail-view .price-info .price-count .pay-price.data-v-271c45a4 {
+.content .view .detail-view .detail-card .price-info .price-count .pay-price.data-v-271c45a4 {
   font-size: 50rpx;
 }
-.content .view .detail-view .price-info .price-count .origin-price.data-v-271c45a4 {
+.content .view .detail-view .detail-card .price-info .price-count .origin-price.data-v-271c45a4 {
   margin-left: 10rpx;
   font-size: 30rpx;
   color: #e9e9eb;
   text-decoration: line-through;
 }
-.content .view .detail-view .price-info .price-other.data-v-271c45a4 {
-  color: red;
+.content .view .detail-view .detail-card .price-info .price-other.data-v-271c45a4 {
+  color: #e9e9eb;
+}
+.content .view .detail-view .detail-card .detail-info.data-v-271c45a4 {
+  padding: 20rpx 40rpx;
+  font-weight: bold;
+  font-size: 34rpx;
+}
+.content .view .detail-view .detail-card .detail-info .tag.data-v-271c45a4 {
+  display: inline-block;
+  width: auto;
+  padding: 30rpx 10rpx;
+  background: #FFE6D9;
+  color: #FF4242;
+  border-radius: 20rpx;
+  margin-right: 10rpx;
+}
+.content .view .detail-view .detail-card .detail-info .tip.data-v-271c45a4 {
+  display: block;
+  margin-top: 20rpx;
+  font-weight: normal;
+  font-size: 30rpx;
+  color: #909399;
+}
+.content .view .detail-view .selected-card.data-v-271c45a4 {
+  padding: 30rpx;
+  border-radius: 30rpx;
+  background: #FFFFFF;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 50rpx;
+}
+.content .view .detail-view .selected-card .selected-info.data-v-271c45a4 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.content .view .detail-view .selected-card .selected-info .selected-left.data-v-271c45a4 {
+  display: flex;
+  align-items: flex-start;
+  font-size: 30rpx;
+}
+.content .view .detail-view .selected-card .selected-info .selected-left .tip.data-v-271c45a4 {
+  display: block;
+  font-weight: normal;
+  color: #909399;
+  margin-right: 20rpx;
+}
+.content .view .detail-view .selected-card .selected-info .selected-left .desc.data-v-271c45a4 {
+  display: block;
+  flex: 1;
+}
+.content .view .detail-view .selected-card .selected-info .re-select.data-v-271c45a4 {
+  width: auto;
+}
+.content .view .detail-view .graphic-card.data-v-271c45a4 {
+  padding: 30rpx;
+  border-radius: 30rpx;
+  background: #FFFFFF;
+  overflow: hidden;
+}
+.content .view .detail-view .graphic-card .title.data-v-271c45a4 {
+  display: block;
+  font-size: 30rpx;
+  margin-bottom: 30rpx;
+}
+.content .view .detail-view .graphic-card .img-list.data-v-271c45a4 {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+.content .view .detail-view .graphic-card .img-list .img-item.data-v-271c45a4 {
+  width: 100%;
+  height: 400rpx;
 }

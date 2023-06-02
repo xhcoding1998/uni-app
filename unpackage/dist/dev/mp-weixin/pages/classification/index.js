@@ -36,12 +36,11 @@ const _sfc_main = {
         e: common_vendor.f(100, (item, idx, i0) => {
           return {};
         }),
-        f: common_vendor.t(common_vendor.unref(calcHeight)),
-        g: `calc(100vh - ${common_vendor.unref(calcHeight)}px)`,
-        h: common_vendor.p({
+        f: `calc(100vh - ${common_vendor.unref(calcHeight)}px)`,
+        g: common_vendor.p({
           scrollViewConfig: common_vendor.unref(scrollViewConfig)
         }),
-        i: common_vendor.sr(tabComRef, "53149db2-3", {
+        h: common_vendor.sr(tabComRef, "53149db2-3", {
           "k": "tabComRef"
         })
       };
