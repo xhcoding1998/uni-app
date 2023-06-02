@@ -6,6 +6,7 @@ if (!Math) {
   "./pages/classification/index.js";
   "./pages/shoppingCart/index.js";
   "./pages/main/index.js";
+  "./pages/pdc-detail/index.js";
 }
 const _sfc_main = {
   onLaunch: function() {

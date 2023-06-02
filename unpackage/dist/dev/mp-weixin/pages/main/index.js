@@ -1,69 +1,104 @@
 "use strict";
 const common_vendor = require("../../common/vendor.js");
+const hooks_index = require("../../hooks/index.js");
 if (!Array) {
   const _easycom_x_nav_bar2 = common_vendor.resolveComponent("x-nav-bar");
+  const _easycom_uni_icons2 = common_vendor.resolveComponent("uni-icons");
   const _easycom_x_scroll2 = common_vendor.resolveComponent("x-scroll");
   const _easycom_x_tab_bar2 = common_vendor.resolveComponent("x-tab-bar");
-  (_easycom_x_nav_bar2 + _easycom_x_scroll2 + _easycom_x_tab_bar2)();
+  (_easycom_x_nav_bar2 + _easycom_uni_icons2 + _easycom_x_scroll2 + _easycom_x_tab_bar2)();
 }
 const _easycom_x_nav_bar = () => "../../components/x-nav-bar/index.js";
+const _easycom_uni_icons = () => "../../uni_modules/uni-icons/components/uni-icons/uni-icons.js";
 const _easycom_x_scroll = () => "../../components/x-scroll/index.js";
 const _easycom_x_tab_bar = () => "../../components/x-tab-bar/index.js";
 if (!Math) {
-  (_easycom_x_nav_bar + _easycom_x_scroll + _easycom_x_tab_bar)();
+  (_easycom_x_nav_bar + _easycom_uni_icons + _easycom_x_scroll + _easycom_x_tab_bar)();
 }
 const _sfc_main = {
   __name: "index",
   setup(__props) {
     const info = common_vendor.index.getSystemInfoSync();
     info.safeAreaInsets;
-    const scrollViewConfig = common_vendor.reactive({
-      "scroll-y": true,
-      "refresher-enabled": true,
-      "lower-threshold": false,
-      "lower-threshold": 100,
-      refresherrefresh: (e) => {
-        scrollViewConfig["refresher-triggered"] = true;
-        setTimeout(() => {
-          scrollViewConfig["refresher-triggered"] = false;
-        }, 3e3);
+    const scrollViewConfig = hooks_index.useScrollConfig({ "scroll-y": true });
+    const navComRef = common_vendor.ref(null), tabComRef = common_vendor.ref(null);
+    const { calcHeight } = hooks_index.useCalcScrollHeight({ navComRef, tabComRef });
+    const orderTargets = [
+      {
+        icon: "icon-daifahuo",
+        name: "待付款"
       },
-      scrolltolower: (e) => {
-        console.log("距离底部小于100px");
+      {
+        icon: "icon-daifukuan",
+        name: "待发货"
+      },
+      {
+        icon: "icon-daishouhuo",
+        name: "待收获"
+      },
+      {
+        icon: "icon-jisutuikuan",
+        name: "退款"
       }
-    });
-    const navComRef = common_vendor.ref(null);
-    const tabComRef = common_vendor.ref(null);
-    let navPosition = common_vendor.ref({});
-    let tabPosition = common_vendor.ref({});
-    common_vendor.onMounted(() => {
-      const query = common_vendor.index.createSelectorQuery().in(navComRef.value);
-      query.select(".nav-bar").boundingClientRect((data) => {
-        navPosition.value = data;
-      }).exec();
-      const query2 = common_vendor.index.createSelectorQuery().in(tabComRef.value);
-      query2.select(".footer-bar").boundingClientRect((data) => {
-        tabPosition.value = data;
-      }).exec();
-    });
-    const calcHeight = common_vendor.computed(() => {
-      return navPosition.value.height + tabPosition.value.height;
-    });
-    console.log(calcHeight);
+    ];
+    const serviceTargets = [
+      {
+        icon: "icon-kefu",
+        name: "客服"
+      },
+      {
+        icon: "icon-shezhi",
+        name: "设置"
+      },
+      {
+        icon: "icon-dizhiguanli",
+        name: "地址管理"
+      },
+      {
+        icon: "icon-duihuanma",
+        name: "兑换码"
+      },
+      {
+        icon: "icon-choujiang",
+        name: "抽奖"
+      },
+      {
+        icon: "icon-jifen",
+        name: "积分"
+      }
+    ];
     return (_ctx, _cache) => {
       return {
         a: common_vendor.sr(navComRef, "d311227b-0", {
           "k": "navComRef"
         }),
-        b: common_vendor.f(100, (i, k0, i0) => {
-          return {};
+        b: common_vendor.f(orderTargets, (item, idx, i0) => {
+          return {
+            a: "d311227b-2-" + i0 + ",d311227b-1",
+            b: common_vendor.p({
+              ["custom-prefix"]: "iconfont",
+              type: item.icon,
+              size: "25"
+            }),
+            c: common_vendor.t(item.name)
+          };
         }),
-        c: common_vendor.t(common_vendor.unref(calcHeight)),
+        c: common_vendor.f(serviceTargets, (item, idx, i0) => {
+          return {
+            a: "d311227b-3-" + i0 + ",d311227b-1",
+            b: common_vendor.p({
+              ["custom-prefix"]: "iconfont",
+              type: item.icon,
+              size: "25"
+            }),
+            c: common_vendor.t(item.name)
+          };
+        }),
         d: `calc(100vh - ${common_vendor.unref(calcHeight)}px)`,
         e: common_vendor.p({
-          scrollViewConfig
+          scrollViewConfig: common_vendor.unref(scrollViewConfig)
         }),
-        f: common_vendor.sr(tabComRef, "d311227b-2", {
+        f: common_vendor.sr(tabComRef, "d311227b-4", {
           "k": "tabComRef"
         })
       };

@@ -34,6 +34,11 @@ const _sfc_main = {
     });
     const navComRef = common_vendor.ref(null), tabComRef = common_vendor.ref(null);
     const { calcHeight } = hooks_index.useCalcScrollHeight({ navComRef, tabComRef });
+    const toDetail = () => {
+      common_vendor.index.navigateTo({
+        url: "/pages/pdc-detail/index"
+      });
+    };
     return (_ctx, _cache) => {
       return {
         a: common_vendor.sr(navComRef, "1cf27b2a-0", {
@@ -45,11 +50,12 @@ const _sfc_main = {
         c: common_vendor.f(20, (item, idx, i0) => {
           return {};
         }),
-        d: `calc(100vh - ${common_vendor.unref(calcHeight)}px)`,
-        e: common_vendor.p({
+        d: common_vendor.o(toDetail),
+        e: `calc(100vh - ${common_vendor.unref(calcHeight)}px)`,
+        f: common_vendor.p({
           scrollViewConfig: common_vendor.unref(scrollViewConfig)
         }),
-        f: common_vendor.sr(tabComRef, "1cf27b2a-2", {
+        g: common_vendor.sr(tabComRef, "1cf27b2a-2", {
           "k": "tabComRef"
         })
       };

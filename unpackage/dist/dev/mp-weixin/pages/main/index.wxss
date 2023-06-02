@@ -1,11 +1,78 @@
 /* 颜色变量 */
-/* 行为相关颜色 */
 /* nav的颜色*/
 /* 默认字体颜色*/
 .content.data-v-d311227b {
   height: 100vh;
   overflow: hidden;
+  background: #e9e9eb;
 }
 .content .view.data-v-d311227b {
   width: 100%;
+  padding: 30rpx;
+  box-sizing: border-box;
+}
+.content .view .main-card.data-v-d311227b {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 30rpx;
+}
+.content .view .main-card .center-card.data-v-d311227b {
+  padding: 20rpx;
+  background: #fff;
+  border-radius: 20rpx;
+}
+.content .view .main-card .center-card .center-header.data-v-d311227b {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.content .view .main-card .center-card .center-header .title.data-v-d311227b {
+  font-size: 34rpx;
+  font-weight: bold;
+}
+.content .view .main-card .center-card .center-header .tip.data-v-d311227b {
+  font-size: 30rpx;
+  color: #909399;
+}
+.content .view .main-card .center-card .target-list.data-v-d311227b {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 60rpx 30rpx;
+  padding: 30rpx;
+}
+.content .view .main-card .center-card .target-list .target-item.data-v-d311227b {
+  text-align: center;
+  margin: 0 auto;
+}
+.content .view .main-card .center-card .target-list .target-item .target-name.data-v-d311227b {
+  font-size: 30rpx;
+  margin-top: 10rpx;
+}
+.content .view .main-card .user-center .user-info.data-v-d311227b {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.content .view .main-card .user-center .user-info .user-detail.data-v-d311227b {
+  display: flex;
+  align-items: center;
+}
+.content .view .main-card .user-center .user-info .user-detail .avtar.data-v-d311227b {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  background: rgba(184, 184, 184, 0.5);
+}
+.content .view .main-card .user-center .user-info .user-detail .name.data-v-d311227b {
+  margin-left: 20rpx;
+}
+.content .view .main-card .user-center .user-info .user-detail .name .title.data-v-d311227b {
+  font-size: 38rpx;
+  font-weight: bold;
+}
+.content .view .main-card .user-center .user-info .code-view.data-v-d311227b {
+  width: 80rpx;
+  height: 80rpx;
+  background: rgba(184, 184, 184, 0.5);
+  border-radius: 20rpx;
 }

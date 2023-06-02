@@ -1,12 +1,24 @@
 /* 颜色变量 */
 
-/* 行为相关颜色 */
-$uni-color-primary: #007aff;
-$uni-color-success: #4cd964;
-$uni-color-warning: #f0ad4e;
-$uni-color-error: #dd524d;
+$uni-1-rpx: 10rpx;
+$uni-2-rpx: 20rpx;
+$uni-3-rpx: 30rpx;
+$uni-4-rpx: 40rpx;
+$uni-5-rpx: 50rpx;
+$uni-6-rpx: 60rpx;
+$uni-7-rpx: 70rpx;
+$uni-8-rpx: 80rpx;
+$uni-9-rpx: 90rpx;
+$uni-10-rpx: 100rpx;
+
+$uni-font-size: 30rpx;
+$uni-h2-size: 38rpx;
+$uni-h3-size: 34rpx;
 
 $uni-border-color: rgba(184, 184, 184, 0.5);
+
+$uni-body-bg: #e9e9eb;
+$uni-box-bg: #FFFFFF;
 
 /* nav的颜色*/
 $uni-nav-bar-bg: #FFFFFF;
@@ -14,3 +26,7 @@ $uni-tab-bar-bg: #FFFFFF;
 
 /* 默认字体颜色*/
 $uni-font-color: #000000;
+$uni-tip-color: #909399;
+
+
+$uni-price-bg: #79BBFF;

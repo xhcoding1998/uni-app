@@ -7,8 +7,9 @@
 				@click="navigatorTo(item)"
 			>
 				<uni-icons
-				 :type="item.icon" size="20" 
-				 :color="'/'+currentPage.route === item.path? '#007aff' : ''"
+					custom-prefix="iconfont" 
+					:type="item.icon" size="25" 
+					:color="'/'+currentPage.route === item.path? '#007aff' : ''"
 				/>
 				<span class="title">{{ item.title }}</span>
 			</view>
@@ -17,7 +18,7 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+	import { ref } from "vue";
 	const info = uni.getSystemInfoSync()
 	const { top, bottom } = info.safeAreaInsets
 	
@@ -25,10 +26,10 @@ import { ref } from "vue";
 	const currentPage = pages[pages.length-1]
 	console.log(currentPage)
 	const tabList = [
-		{ title: '首页', icon: 'home', path: '/pages/index/index' },
-		{ title: '分类', icon: 'list', path: '/pages/classification/index' },
-		{ title: '购物车', icon: 'cart', path: '/pages/shoppingCart/index' },
-		{ title: '我的', icon: 'person', path: '/pages/main/index' },
+		{ title: '首页', icon: 'icon-shouye', path: '/pages/index/index' },
+		{ title: '分类', icon: 'icon-fenlei', path: '/pages/classification/index' },
+		{ title: '购物车', icon: 'icon-gouwuche', path: '/pages/shoppingCart/index' },
+		{ title: '我的', icon: 'icon-wode', path: '/pages/main/index' },
 	]
 	const navigatorTo = (item) => {
 		uni.switchTab({

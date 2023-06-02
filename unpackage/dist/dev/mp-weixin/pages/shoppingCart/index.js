@@ -1,5 +1,6 @@
 "use strict";
 const common_vendor = require("../../common/vendor.js");
+const hooks_index = require("../../hooks/index.js");
 if (!Array) {
   const _easycom_x_nav_bar2 = common_vendor.resolveComponent("x-nav-bar");
   const _easycom_x_scroll2 = common_vendor.resolveComponent("x-scroll");
@@ -17,10 +18,9 @@ const _sfc_main = {
   setup(__props) {
     const info = common_vendor.index.getSystemInfoSync();
     info.safeAreaInsets;
-    const scrollViewConfig = common_vendor.reactive({
+    const scrollViewConfig = hooks_index.useScrollConfig({
       "scroll-y": true,
       "refresher-enabled": true,
-      "lower-threshold": false,
       "lower-threshold": 100,
       refresherrefresh: (e) => {
         scrollViewConfig["refresher-triggered"] = true;
@@ -32,36 +32,22 @@ const _sfc_main = {
         console.log("距离底部小于100px");
       }
     });
-    const navComRef = common_vendor.ref(null);
-    const tabComRef = common_vendor.ref(null);
-    let navPosition = common_vendor.ref({});
-    let tabPosition = common_vendor.ref({});
-    common_vendor.onMounted(() => {
-      const query = common_vendor.index.createSelectorQuery().in(navComRef.value);
-      query.select(".nav-bar").boundingClientRect((data) => {
-        navPosition.value = data;
-      }).exec();
-      const query2 = common_vendor.index.createSelectorQuery().in(tabComRef.value);
-      query2.select(".footer-bar").boundingClientRect((data) => {
-        tabPosition.value = data;
-      }).exec();
-    });
-    const calcHeight = common_vendor.computed(() => {
-      return navPosition.value.height + tabPosition.value.height;
-    });
-    console.log(calcHeight);
+    const navComRef = common_vendor.ref(null), tabComRef = common_vendor.ref(null);
+    const { calcHeight } = hooks_index.useCalcScrollHeight({ navComRef, tabComRef });
     return (_ctx, _cache) => {
       return {
         a: common_vendor.sr(navComRef, "f4bade82-0", {
           "k": "navComRef"
         }),
-        b: common_vendor.f(100, (i, k0, i0) => {
+        b: common_vendor.f(8, (item, idx, i0) => {
           return {};
         }),
-        c: common_vendor.t(common_vendor.unref(calcHeight)),
+        c: common_vendor.f(20, (item, idx, i0) => {
+          return {};
+        }),
         d: `calc(100vh - ${common_vendor.unref(calcHeight)}px)`,
         e: common_vendor.p({
-          scrollViewConfig
+          scrollViewConfig: common_vendor.unref(scrollViewConfig)
         }),
         f: common_vendor.sr(tabComRef, "f4bade82-2", {
           "k": "tabComRef"

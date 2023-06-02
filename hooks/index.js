@@ -9,7 +9,7 @@ export const useScrollConfig = (config = {}) => {
 	})
 }
 
-export const useCalcScrollHeight = ({ navComRef, tabComRef }) => {
+export const useCalcScrollHeight = ({ navComRef = '', tabComRef = '' } = {}) => {
 	const info = uni.getSystemInfoSync()
 	const { top, bottom } = info.safeAreaInsets
 	
@@ -17,19 +17,25 @@ export const useCalcScrollHeight = ({ navComRef, tabComRef }) => {
 	let tabPosition = ref({})
 	
 	onMounted(() => {
-		const query = uni.createSelectorQuery().in(navComRef.value)
-		query.select('.nav-bar').boundingClientRect(data => {
-			navPosition.value = data
-		}).exec();
+		if(navComRef) {
+			const query = uni.createSelectorQuery().in(navComRef.value)
+			query.select('.nav-bar').boundingClientRect(data => {
+				navPosition.value = data
+			}).exec();
+		}
 		
-		const query2 = uni.createSelectorQuery().in(tabComRef.value)
-		query2.select('.footer-bar').boundingClientRect(data => {
-			tabPosition.value = data
-		}).exec();
+		if(tabComRef) {
+			const query2 = uni.createSelectorQuery().in(tabComRef.value)
+			query2.select('.footer-bar').boundingClientRect(data => {
+				tabPosition.value = data
+			}).exec();
+		}
 	})
 	
 	const calcHeight = computed(() => {
-		return navPosition.value.height + tabPosition.value.height
+		const navValue = navComRef? navPosition.value : { height: 0 };
+		const tabValue = tabComRef? tabPosition.value : { height: 0 };
+		return navValue.height + tabValue.height
 	})
 	return {
 		calcHeight

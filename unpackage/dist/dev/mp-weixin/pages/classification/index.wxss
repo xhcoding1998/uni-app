@@ -1,10 +1,10 @@
 /* 颜色变量 */
-/* 行为相关颜色 */
 /* nav的颜色*/
 /* 默认字体颜色*/
 .content.data-v-53149db2 {
   height: 100vh;
   overflow: hidden;
+  background: #e9e9eb;
 }
 .content .view.data-v-53149db2 {
   width: 100%;
@@ -23,10 +23,10 @@
   box-sizing: border-box;
 }
 .content .view .left-tab-list .left-tab-content .left-tab-item.data-v-53149db2 {
-  width: 50px;
-  height: 50px;
-  border-radius: 10px;
-  background: rgba(184, 184, 184, 0.5);
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 20rpx;
+  background: #FFFFFF;
 }
 .content .view .right-pdc-list.data-v-53149db2 {
   flex: 1;
@@ -36,12 +36,12 @@
   width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180rpx, 1fr));
-  gap: 15px;
+  gap: 30rpx;
   padding: 30rpx 30rpx 20rpx 30rpx;
   box-sizing: border-box;
 }
 .content .view .right-pdc-list .right-pdc-content .right-pdc-item.data-v-53149db2 {
-  background: rgba(184, 184, 184, 0.5);
+  background: #FFFFFF;
   height: 150rpx;
-  border-radius: 10px;
+  border-radius: 20rpx;
 }

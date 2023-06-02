@@ -1,11 +1,56 @@
 /* 颜色变量 */
-/* 行为相关颜色 */
 /* nav的颜色*/
 /* 默认字体颜色*/
 .content.data-v-f4bade82 {
   height: 100vh;
   overflow: hidden;
+  background: #e9e9eb;
 }
 .content .view.data-v-f4bade82 {
   width: 100%;
+  padding: 30rpx;
+  box-sizing: border-box;
+}
+.content .view .swiper-banner.data-v-f4bade82 {
+  width: 100%;
+  height: 360rpx;
+  border-radius: 20rpx;
+  background: #FFFFFF;
+}
+.content .view .tab-list.data-v-f4bade82 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120rpx, 1fr));
+  gap: 20rpx 40rpx;
+  padding: 30rpx 0;
+}
+.content .view .tab-list .tab-item.data-v-f4bade82 {
+  width: 100%;
+  height: 80rpx;
+  border-radius: 20rpx;
+  margin: 0 auto;
+  background: #FFFFFF;
+}
+.content .view .pdc-list.data-v-f4bade82 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220rpx, 1fr));
+  gap: 40rpx 20rpx;
+  padding-bottom: 40rpx;
+}
+.content .view .pdc-list .pdc-item.data-v-f4bade82 {
+  width: 100%;
+  height: auto;
+  border-radius: 20rpx;
+  margin: 0 auto;
+  background: #FFFFFF;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+.content .view .pdc-list .pdc-item .pdc-img.data-v-f4bade82 {
+  width: 100%;
+  height: 300rpx;
+  border-radius: 20rpx;
+  background: #FFFFFF;
+}
+.content .view .pdc-list .pdc-item .pdc-info.data-v-f4bade82 {
+  height: 100rpx;
 }

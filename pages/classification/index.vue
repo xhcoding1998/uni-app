@@ -56,6 +56,7 @@
 	.content {
 		height: 100vh;
 		overflow: hidden;
+		background: $uni-body-bg;
 		.view {
 			width: 100%;
 			display: flex;
@@ -66,16 +67,16 @@
 				
 				.left-tab-content {
 					display: grid;
-					gap: 20rpx;
+					gap: $uni-2-rpx;
 					grid-template-columns: repeat(1, 1fr);
 					border-right: 1px solid $uni-border-color;
-					padding: 30rpx;
+					padding: $uni-3-rpx;
 					box-sizing: border-box;
 					.left-tab-item {
-						width: 50px;
-						height: 50px;
-						border-radius: 10px;
-						background: $uni-border-color;
+						width: $uni-9-rpx;
+						height:$uni-9-rpx;
+						border-radius: $uni-2-rpx;
+						background: $uni-box-bg;
 					}
 				}
 			}
@@ -86,13 +87,13 @@
 					width: 100%;
 					display: grid;
 					grid-template-columns: repeat(auto-fit, minmax(180rpx, 1fr));
-					gap: 15px;
-					padding: 30rpx 30rpx 20rpx 30rpx;
+					gap: $uni-3-rpx;
+					padding: $uni-3-rpx $uni-3-rpx $uni-2-rpx $uni-3-rpx;
 					box-sizing: border-box;
 					.right-pdc-item {
-						background: $uni-border-color;
+						background: $uni-box-bg;
 						height: 150rpx;
-						border-radius: 10px;
+						border-radius: $uni-2-rpx;
 					}
 				}
 			}

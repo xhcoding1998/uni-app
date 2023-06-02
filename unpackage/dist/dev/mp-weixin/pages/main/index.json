@@ -3,6 +3,7 @@
   "enablePullDownRefresh": false,
   "usingComponents": {
     "x-nav-bar": "../../components/x-nav-bar/index",
+    "uni-icons": "../../uni_modules/uni-icons/components/uni-icons/uni-icons",
     "x-scroll": "../../components/x-scroll/index",
     "x-tab-bar": "../../components/x-tab-bar/index"
   }

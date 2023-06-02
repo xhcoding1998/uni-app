@@ -11,23 +11,29 @@ const useScrollConfig = (config = {}) => {
     })
   });
 };
-const useCalcScrollHeight = ({ navComRef, tabComRef }) => {
+const useCalcScrollHeight = ({ navComRef = "", tabComRef = "" } = {}) => {
   const info = common_vendor.index.getSystemInfoSync();
   info.safeAreaInsets;
   let navPosition = common_vendor.ref({});
   let tabPosition = common_vendor.ref({});
   common_vendor.onMounted(() => {
-    const query = common_vendor.index.createSelectorQuery().in(navComRef.value);
-    query.select(".nav-bar").boundingClientRect((data) => {
-      navPosition.value = data;
-    }).exec();
-    const query2 = common_vendor.index.createSelectorQuery().in(tabComRef.value);
-    query2.select(".footer-bar").boundingClientRect((data) => {
-      tabPosition.value = data;
-    }).exec();
+    if (navComRef) {
+      const query = common_vendor.index.createSelectorQuery().in(navComRef.value);
+      query.select(".nav-bar").boundingClientRect((data) => {
+        navPosition.value = data;
+      }).exec();
+    }
+    if (tabComRef) {
+      const query2 = common_vendor.index.createSelectorQuery().in(tabComRef.value);
+      query2.select(".footer-bar").boundingClientRect((data) => {
+        tabPosition.value = data;
+      }).exec();
+    }
   });
   const calcHeight = common_vendor.computed(() => {
-    return navPosition.value.height + tabPosition.value.height;
+    const navValue = navComRef ? navPosition.value : { height: 0 };
+    const tabValue = tabComRef ? tabPosition.value : { height: 0 };
+    return navValue.height + tabValue.height;
   });
   return {
     calcHeight

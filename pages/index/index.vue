@@ -23,7 +23,8 @@
 				<view class="pdc-list">
 					<view 
 						class="pdc-item"
-						v-for="(item, idx) in 20">
+						v-for="(item, idx) in 20"
+						@click="toDetail">
 						<img class="pdc-img" src="" alt="">
 						<view class="pdc-info">
 							
@@ -59,53 +60,60 @@
 	
 	const navComRef = ref(null), tabComRef = ref(null)
 	const { calcHeight } = useCalcScrollHeight({ navComRef, tabComRef })
+	
+	const toDetail = () => {
+		uni.navigateTo({
+			url: '/pages/pdc-detail/index'
+		})
+	}
 </script>
 
 <style scoped lang="scss">
 	.content {
 		height: 100vh;
 		overflow: hidden;
+		background: $uni-body-bg;
 		.view {
 			width: 100%;
-			padding: 30rpx;
+			padding: $uni-3-rpx;
 			box-sizing: border-box;
 			.swiper-banner {
 				width: 100%;
 				height: 360rpx;
-				border-radius: 10px;
-				background: $uni-border-color;
+				border-radius: $uni-2-rpx;
+				background: $uni-box-bg;
 			}
 			.tab-list {
 				display: grid;
 				grid-template-columns: repeat(auto-fit, minmax(120rpx, 1fr));
-				gap: 10px 20px;
-				padding: 15px 0;
+				gap: $uni-2-rpx $uni-4-rpx;
+				padding: $uni-3-rpx 0;
 				.tab-item {
 					width: 100%;
-					height: 45px;
-					border-radius: 10px;
+					height: $uni-8-rpx;
+					border-radius: $uni-2-rpx;
 					margin: 0 auto;
-					background: $uni-border-color;
+					background: $uni-box-bg;
 				}
 			}
 			.pdc-list {
 				display: grid;
 				grid-template-columns: repeat(auto-fit, minmax(220rpx, 1fr));
-				gap: 20px 10px;
-				padding-bottom: 20px;
+				gap: $uni-4-rpx $uni-2-rpx;
+				padding-bottom: $uni-4-rpx;
 				.pdc-item {
 					width: 100%;
 					height: auto;
-					border-radius: 10px;
+					border-radius: $uni-2-rpx;
 					margin: 0 auto;
-					background: $uni-border-color;
-					padding: 10px;
+					background: $uni-box-bg;
+					padding: $uni-2-rpx;
 					box-sizing: border-box;
 					.pdc-img {
 						width: 100%;
 						height: 300rpx;
-						border-radius: 10px;
-						background: #fff;
+						border-radius: $uni-2-rpx;
+						background: $uni-box-bg;
 					}
 					.pdc-info {
 						height: 100rpx;
